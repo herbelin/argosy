@@ -315,9 +315,9 @@ Section Layers.
       exists i, cs1'. split; intuition.
     }
     destruct H2 as ([]&as1&?&?).
-    - edestruct H3 as ([]&?&((?&<-)&?)).
-      destruct H5 as (v&as2&?&?&?&?&?).
-      inversion H7; subst; exists as1, as2. subst; split; auto.
+    - destruct H3 as ([]&?&((?&<-)&H4)).
+      destruct H4 as (v&as2&?&?&?&?&H6).
+      inversion H6; subst; exists as1, as2. subst; split; auto.
     - repeat destruct H2. inversion H3; subst; eauto.
   Qed.
 
